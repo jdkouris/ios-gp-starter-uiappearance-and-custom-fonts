@@ -30,6 +30,12 @@ enum AppearanceHelper {
         
         UITextField.appearance().tintColor = lambdaRed
         UITextView.appearance().tintColor = lambdaRed
-        
+    }
+    
+    static func style(button: UIButton) {
+        button.titleLabel?.font = typerighterFont(with: .callout, pointSize: 30)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = lambdaRed
+        button.layer.cornerRadius = 8.0
     }
 }
