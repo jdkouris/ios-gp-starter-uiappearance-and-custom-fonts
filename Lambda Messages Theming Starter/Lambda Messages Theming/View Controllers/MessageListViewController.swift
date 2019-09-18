@@ -17,6 +17,8 @@ class MessageListViewController: UIViewController, UITableViewDelegate, UITableV
         tableView.dataSource = self
         
         NotificationCenter.default.addObserver(self, selector: #selector(sortMessageArray), name: messagesWereUpdatedNotification, object: nil)
+        newMessageButton.backgroundColor = AppearanceHelper.lambdaRed
+        newMessageButton.layer.cornerRadius = newMessageButton.frame.width / 2
         
         messageController.fetchMessages()
     }
